@@ -1,6 +1,4 @@
-import getConfig from "next/config";
 import Image from "next/image";
-import { env } from "process";
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';

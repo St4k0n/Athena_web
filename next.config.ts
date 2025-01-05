@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   basePath: "/Athena_web",
-  assetPrefix: "/Athena_web"
+  assetPrefix: "/Athena_web",
+  publicRuntimeConfig: {
+    basePath: "/Athena_web"
+  }
 };
 
 export default nextConfig;

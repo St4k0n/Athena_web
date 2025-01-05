@@ -96,6 +96,7 @@ export default function Home() {
             height={16}
           />
           Go to nextjs.org →
+          <p>{basePath}</p>
         </a>
       </footer>
     </div>

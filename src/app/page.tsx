@@ -1,10 +1,9 @@
 import getConfig from "next/config";
 import Image from "next/image";
-const { publicRuntimeConfig } = getConfig();
+import { env } from "process";
 
 export default function Home() {
-  console.log(publicRuntimeConfig, getConfig(), "ici")
-  const basePath = publicRuntimeConfig?.basePath || "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">

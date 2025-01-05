@@ -3,6 +3,7 @@ import Image from "next/image";
 const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
+  console.log(publicRuntimeConfig, getConfig(), "ici")
   const basePath = publicRuntimeConfig?.basePath || "";
 
   return (

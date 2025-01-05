@@ -28,7 +28,7 @@ jobs:
   # Build job
   build:
     env:
-      NEXT_PUBLIC_BASE_PATH: Athena_web
+      NEXT_PUBLIC_BASE_PATH: /Athena_web
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

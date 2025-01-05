@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: "/Athena_web",
+  assetPrefix: "/Athena_web"
 };
 
 export default nextConfig;

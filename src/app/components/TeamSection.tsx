@@ -1,4 +1,4 @@
-import Image from "next/image"; // if you still need Next's Image for other images (not the bg)
+import Image from "next/image";
 
 type TeamMember = {
     name: string

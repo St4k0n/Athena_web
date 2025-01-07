@@ -7,12 +7,13 @@ export default function TestimonialsSection({ basePath }: Props) {
         <section
             id="testimonials"
             className="
-            relative
-            w-full
-            min-h-[80vh]
-            py-16
-            text-white
-            scroll-mt-16"
+        relative
+        w-full
+        min-h-[80vh]
+        py-16
+        text-white
+        scroll-mt-16
+      "
             style={{
                 backgroundImage: `url("${basePath}/testimonial-bg.jpg")`,
                 backgroundAttachment: "fixed",
@@ -24,42 +25,40 @@ export default function TestimonialsSection({ basePath }: Props) {
 
             {/* Main container to center & limit width */}
             <div className="relative max-w-6xl mx-auto px-4 sm:px-8">
-
                 {/* Flex container for 2 testimonials side by side (on md+ screens) */}
                 <div className="md:flex md:gap-8">
                     <blockquote className="flex-1 max-w-2xl mx-auto bg-black/40 p-4 rounded-md mb-8 italic text-center">
-                        &ldquo;Depuis 2019, mes recherches en intelligence artificielle appliqu&eacute;es &agrave;
-                        divers domaines comme la pr&eacute;diction, la g&eacute;n&eacute;ration, l&apos;image et les
-                        jeux ont &eacute;t&eacute; une aventure riche en apprentissages. Gr&acirc;ce &agrave; cette
-                        exp&eacute;rience, j&apos;ai d&eacute;cid&eacute; de d&eacute;velopper une solution d&apos;investissement
-                        dynamique pour les march&eacute;s financiers. Ce projet utilise des
-                        technologies avanc&eacute;es et des algorithmes sophistiqu&eacute;s pour pr&eacute;dire les
-                        tendances du march&eacute;. Le principal d&eacute;fi r&eacute;side dans la grande
-                        volatilit&eacute; et les comportements chaotiques des march&eacute;s, ce qui rend
-                        les pr&eacute;visions extr&ecirc;mement complexes. Pour surmonter ces d&eacute;fis, j&rsquo;ai
-                        men&eacute; des recherches approfondies sur diff&eacute;rents types de mod&egrave;les, ce
-                        qui a permis de consolider notre approche. R&eacute;cemment, j&apos;ai &eacute;tudi&eacute;
-                        divers mod&egrave;les dans le cadre de mon stage, ce qui a renforc&eacute; ma
-                        conviction quant &agrave; la faisabilit&eacute; de ce projet. Nous avons opt&eacute; pour
-                        un mod&egrave;le Mamba comme premier prototype, int&eacute;grant des informations
-                        externes pour une base solide. Cette approche permet de d&eacute;velopper des
-                        strat&eacute;gies plus efficaces gr&acirc;ce &agrave; l&apos;int&eacute;gration d&apos;agents multiples et
-                        &agrave; l&apos;application de techniques de renforcement, ce qui assure
-                        l&apos;&eacute;volution et l&apos;adaptabilit&eacute; du mod&egrave;le au fil du temps.&rdquo;
+                        &ldquo;Since 2019, my research in artificial intelligence applied to
+                        various fields such as prediction, generation, image processing, and
+                        gaming has been a journey rich in learning experiences. Thanks to this
+                        background, I decided to develop a dynamic investment solution for the
+                        financial markets. This project utilizes advanced technologies and
+                        sophisticated algorithms to forecast market trends. The main challenge
+                        lies in the high volatility and chaotic behavior of the markets,
+                        making predictions extremely complex. To overcome these hurdles, I
+                        conducted in-depth research on various types of models, which helped
+                        strengthen our approach. Recently, I studied different models during
+                        my internship, further reinforcing my belief in the project&rsquo;s
+                        feasibility. We opted for a Mamba model as our first prototype,
+                        integrating external data as a solid foundation. This approach enables
+                        the development of more effective strategies by incorporating multiple
+                        agents and leveraging reinforcement techniques, ensuring the
+                        model&rsquo;s evolution and adaptability over time.&rdquo;
                         <br />
                         <br />
-                        &mdash; Jacques Marques, membre de l&rsquo;&eacute;quipe
+                        &mdash; Jacques Marques, team member
                     </blockquote>
 
                     <blockquote className="flex-1 max-w-2xl mx-auto bg-black/40 p-4 rounded-md mb-8 italic text-center">
-                        &ldquo;Ce qui rend Athena unique par rapport &agrave; d&apos;autres acteurs du march&eacute;,
-                        c&apos;est sa volont&eacute; de viser des publics vari&eacute;s facilement gr&acirc;ce &agrave; ces diff&eacute;rents
-                        abonnements. Cette diversit&eacute; coupl&eacute;e &agrave; une innovation accrue, et cette volont&eacute;
-                        de vouloir utiliser des technologies et des strat&eacute;gies novatrices comme un suivi
-                        pr&eacute;cis de l&apos;actualit&eacute;, tout cela fait de ce projet un projet prometteur &agrave; mes yeux.&rdquo;
+                        &ldquo;What makes Athena unique compared to other players in the
+                        market is its willingness to easily cater to various audiences through
+                        different subscription plans. This diversity, combined with increased
+                        innovation and a strong desire to employ cutting-edge technologies and
+                        strategies like precise news monitoring, makes me see this project as
+                        very promising indeed.&rdquo;
                         <br />
                         <br />
-                        &mdash; Julien Moreau, Entrepreneur et Investisseur Angel
+                        &mdash; Julien Moreau, Entrepreneur and Angel Investor
                     </blockquote>
                 </div>
             </div>

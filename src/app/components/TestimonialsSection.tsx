@@ -1,25 +1,25 @@
-export default function TestimonialsSection() {
+type Props = {
+    basePath: string;
+};
+
+export default function TestimonialsSection({ basePath }: Props) {
     return (
         <section
             id="testimonials"
             className="
-        relative
-        w-full
-        min-h-[80vh]
-        py-16
-        bg-fixed
-        bg-cover
-        bg-center
-        bg-no-repeat
-        text-white
-        scroll-mt-16
-        mb-8
-      "
+            relative
+            w-full
+            min-h-[80vh]
+            py-16
+            text-white
+            scroll-mt-16"
             style={{
-                backgroundImage: 'url("/testimonial-bg.jpg")',
+                backgroundImage: `url("${basePath}/testimonial-bg.jpg")`,
+                backgroundAttachment: "fixed",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
         >
-            {/* Overlay for darkening the background */}
             <div className="absolute inset-0 bg-black bg-opacity-60" />
 
             {/* Main container to center & limit width */}

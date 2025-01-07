@@ -21,9 +21,9 @@ export default function Home() {
           <OverviewSection />
           <TeamSection basePath={basePath} />
           <TimelineSection />
-          <TestimonialsSection />
+          <TestimonialsSection basePath={basePath} />
           <ExtraImagesSection basePath={basePath} />
-          <ContactSection />
+          <ContactSection basePath={basePath} />
           <NextStepsSection />
         </main>
 

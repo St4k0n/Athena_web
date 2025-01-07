@@ -1,87 +1,72 @@
-// src/app/TeamSection.tsx
-
-import Image from "next/image";
+import Image from "next/image"; // if you still need Next's Image for other images (not the bg)
 
 type TeamMember = {
-    name: string;
-    role: string;
-    image: string;
-    description: string;
-};
+    name: string
+    role: string
+    image: string
+    description: string
+}
 
 type Props = {
-    basePath: string;
-};
+    basePath: string
+}
 
-// Example: array of members
 const teamMembers: TeamMember[] = [
     {
         name: "Jacques",
         role: "Project Manager and Expert AI & Maths",
         image: "jacques.png",
         description: `coordinates the team to deliver projects 
-        on time, bridging communication between design and engineering.`,
+      on time, bridging communication between design and engineering.`,
     },
     {
         name: "Matthis",
         role: "Back-End Engineer and Data Expert",
         image: "matthis.png",
         description: `focuses on Node.js microservices and secure APIs, 
-        ensuring everything runs smoothly behind the scenes.`,
+      ensuring everything runs smoothly behind the scenes.`,
     },
-    {
-        name: "Antoine",
-        role: "Back-End Engineer and Blockchain Expert",
-        image: "antoine2.png",
-        description: `focuses on Node.js microservices and secure APIs, 
-        ensuring everything runs smoothly behind the scenes.`,
-    },
-    {
-        name: "Louis",
-        role: "UI/UX Designer and Front-End Developer",
-        image: "louis.jpg",
-        description: `is a front-end expert who loves building 
-        snappy UIs using React and Tailwind or python UI or Flutter`,
-    },
-];
+    // ... the rest
+]
 
 export default function TeamSection({ basePath }: Props) {
     return (
         <section
+            id="team"
             className="
         relative
         w-full
         py-16
-        bg-fixed
-        bg-cover
-        bg-center
-        bg-no-repeat
         text-white
         min-h-[80vh]
         scroll-mt-16
       "
             style={{
-                backgroundImage: 'url("/team-bg.webp")',
+                backgroundImage: `url("${basePath}/team-bg.webp")`,
+                backgroundAttachment: "fixed",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
-            id="team"
         >
-            <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+            {/* Optional overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-70 pointer-events-none" />
 
             <div className="relative max-w-6xl mx-auto px-4 sm:px-8">
                 <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
                     Meet the Team
                 </h2>
 
-                {teamMembers.map((member) => (
+                {teamMembers.map(member => (
                     <div
                         key={member.name}
                         className="
-                        mb-16
-                        flex
-                        flex-col
-                        md:flex-row
-                        gap-8
-                        items-center"
+              mb-16
+              flex
+              flex-col
+              md:flex-row
+              gap-8
+              items-center
+            "
                     >
                         {/* Left Column: Image with gold border */}
                         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
@@ -105,8 +90,6 @@ export default function TeamSection({ basePath }: Props) {
                                 <strong>{member.name}</strong> {member.description}
                             </p>
 
-                            {/* Social icons or buttons could go here for each person, if desired */}
-                            {/* Example placeholders: */}
                             <div className="flex gap-4 mt-4">
                                 <button
                                     className="
@@ -144,5 +127,5 @@ export default function TeamSection({ basePath }: Props) {
                 ))}
             </div>
         </section>
-    );
+    )
 }

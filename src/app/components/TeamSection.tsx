@@ -76,13 +76,12 @@ export default function TeamSection({ basePath }: Props) {
                     <div
                         key={member.name}
                         className="
-              mb-16
-              flex
-              flex-col
-              md:flex-row
-              gap-8
-              items-center
-            "
+                        mb-16
+                        flex
+                        flex-col
+                        md:flex-row
+                        gap-8
+                        items-center"
                     >
                         {/* Left Column: Image with gold border */}
                         <div className="w-full md:w-1/2 flex justify-center md:justify-end">

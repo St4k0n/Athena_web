@@ -15,7 +15,7 @@ export default function Home() {
   return (
       <>
           <Navbar />
-          <HeroHeader />
+          <HeroHeader basePath={basePath} />
 
         <main className="bg-neutral-900 text-white pt-[80px]">
           <OverviewSection />

@@ -3,19 +3,419 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-sans {
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-black text-white;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #ccc;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navLogo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navMenu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navMenu li a:hover {
+  color: #0f8;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  background: #222;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 90%;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.heroContent p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0f8;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #0c6;
+}
+
+/* Hero background image handling */
+.heroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: brightness(0.4);
+}
+
+/* Overview Section */
+.overview {
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+}
+
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0f8;
+}
+
+.overview ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Team Section */
+.team {
+  padding: 4rem 2rem;
+  background: #2a2a2a;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f8;
+  text-align: center;
+}
+
+.teamWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.teamMember {
+  text-align: center;
+  max-width: 200px;
+}
+
+.teamMember h3 {
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.teamMember p {
+  margin: 0.5rem 0;
+}
+
+.teamMember blockquote {
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Timeline Section */
+.timeline {
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+}
+
+.timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f8;
+  text-align: center;
+}
+
+.timelineList {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timelineList li {
+  margin-bottom: 1rem;
+  background: #222;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.timelineList li strong {
+  color: #fff;
+}
+
+.timelineList li span {
+  float: right;
+  color: #0f8;
+}
+
+/* Testimonials & Partners */
+.testimonials {
+  padding: 4rem 2rem;
+  background: #2a2a2a;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f8;
+}
+
+.testimonialContent {
+  margin-bottom: 2rem;
+}
+
+.testimonialItem {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  background: #222;
+  border-radius: 4px;
+}
+
+.testimonialItem blockquote {
+  font-style: italic;
+  color: #ccc;
+  margin: 0;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.partnerLogo {
+  background: #111;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* Extra Images Section */
+.extraImages {
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+}
+
+.extraImages h2 {
+  font-size: 2rem;
+  color: #0f8;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.imageGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.imageCard {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.imageCard p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 2rem;
+  background: #2a2a2a;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0f8;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto 0 auto;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contactForm button {
+  padding: 0.75rem;
+  background-color: #0f8;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contactForm button:hover {
+  background-color: #0c6;
+}
+
+/* Next Steps Section */
+.nextSteps {
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.my-logo-class {
+  width: 100px;
+  height: auto;
+}
+
+.nextSteps h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f8;
+}
+
+.nextStepsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nextStepItem {
+  background: #222;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  max-width: 300px;
+}
+
+.nextStepItem h3 {
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  background: #000;
+  text-align: center;
+  color: #fff;
+}
+
+.footerLinks {
+  margin-bottom: 1rem;
+}
+
+.footerLinks a {
+  margin: 0 0.5rem;
+  color: #0f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footerLinks a:hover {
+  color: #0c6;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotateY-180 {
+  transform: rotateY(180deg);
+}
+
+

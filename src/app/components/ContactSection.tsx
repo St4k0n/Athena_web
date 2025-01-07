@@ -122,10 +122,10 @@ export default function ContactSection({ basePath }: Props) {
                         <div>
                             <h3 className="text-xl font-semibold text-[#cfa165] mb-2">Email</h3>
                             <a className="text-sm text-gray-200"
-                               href="mailto:contact@projectname.com"
+                               href="mailto:athena.contact00@gmail.com"
                                target="_blank"
                             >
-                                contact@projectname.com</a>
+                                athena.contact00@gmail.com</a>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold text-[#cfa165] mb-2">Address</h3>

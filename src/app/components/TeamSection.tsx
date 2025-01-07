@@ -26,7 +26,20 @@ const teamMembers: TeamMember[] = [
         description: `focuses on Node.js microservices and secure APIs, 
       ensuring everything runs smoothly behind the scenes.`,
     },
-    // ... the rest
+    {
+        name: "Antoine",
+        role: "Back-End Engineer and Blockchain Expert",
+        image: "antoine2.png",
+        description: `focuses on Node.js microservices and secure APIs, 
+        ensuring everything runs smoothly behind the scenes.`,
+    },
+    {
+        name: "Louis",
+        role: "UI/UX Designer and Front-End Developer",
+        image: "louis.jpg",
+        description: `is a front-end expert who loves building 
+        snappy UIs using React and Tailwind or python UI or Flutter`,
+    },
 ]
 
 export default function TeamSection({ basePath }: Props) {

@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-  return (
+    return (
       <>
           <Navbar />
           <HeroHeader basePath={basePath} />
@@ -24,7 +24,7 @@ export default function Home() {
           <TestimonialsSection basePath={basePath} />
           <ExtraImagesSection basePath={basePath} />
           <ContactSection basePath={basePath} />
-          <NextStepsSection />
+          {/*<NextStepsSection />*/}
         </main>
 
         <MyFooter basePath={basePath} />

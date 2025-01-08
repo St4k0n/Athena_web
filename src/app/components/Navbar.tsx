@@ -65,8 +65,8 @@ export default function Navbar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#jsp" className="hover:text-gray-300">
-                        jsp
+                    <a href="#photos" className="hover:text-gray-300">
+                        Photos
                     </a>
                 </li>
                 <li>

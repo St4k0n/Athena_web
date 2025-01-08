@@ -61,7 +61,6 @@ export default function TeamSection({ basePath }: Props) {
                 backgroundPosition: "center",
             }}
         >
-            {/* Optional overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-70 pointer-events-none" />
 
             <div className="relative max-w-6xl mx-auto px-4 sm:px-8">

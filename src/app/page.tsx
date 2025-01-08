@@ -5,7 +5,6 @@ import TimelineSection from "./components/TimelineSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ExtraImagesSection from "./components/ExtraImagesSection";
 import ContactSection from "./components/ContactSection";
-import NextStepsSection from "./components/NextStepsSection";
 import MyFooter from "./components/MyFooter";
 import Navbar from "./components/Navbar";
 
@@ -24,7 +23,6 @@ export default function Home() {
           <TestimonialsSection basePath={basePath} />
           <ExtraImagesSection basePath={basePath} />
           <ContactSection basePath={basePath} />
-          {/*<NextStepsSection />*/}
         </main>
 
         <MyFooter basePath={basePath} />
